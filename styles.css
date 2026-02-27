@@ -20,8 +20,8 @@
     --border-color: #cbd5e1;
 
     /* Typography */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'DM Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -76,14 +76,19 @@ h6 {
 
 h1 {
     font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 h2 {
     font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 h3 {
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 p {
