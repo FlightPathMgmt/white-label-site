@@ -504,12 +504,15 @@ ul {
 }
 
 .gift-types-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--spacing-md);
 }
 
 .gift-card {
+    flex: 1 1 140px;
+    max-width: 220px;
     background-color: var(--white);
     padding: var(--spacing-sm);
     border-radius: var(--border-radius-md);
