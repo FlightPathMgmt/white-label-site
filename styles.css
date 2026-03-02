@@ -395,8 +395,7 @@ ul {
 .stat-card {
     background-color: var(--white);
     padding: var(--spacing-md);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
+    border-radius: var(--border-radius-sm);
     border-left: 4px solid var(--accent-blue);
 }
 
@@ -418,7 +417,8 @@ ul {
     background-color: var(--white);
     padding: var(--spacing-lg) var(--spacing-md);
     border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
     transition: var(--transition);
     position: relative;
     text-align: center;
@@ -558,6 +558,186 @@ ul {
     background-image: linear-gradient(45deg, var(--light-blue) 25%, #e2e8f0 25%, #e2e8f0 50%, var(--light-blue) 50%, var(--light-blue) 75%, #e2e8f0 75%, #e2e8f0 100%);
     background-size: 20px 20px;
     box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   Resource Cards
+   ========================================================================== */
+.resource-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: var(--spacing-md);
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.resource-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: var(--teal);
+    color: inherit;
+}
+
+.resource-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.resource-card p {
+    font-size: 0.925rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.resource-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--teal);
+    background-color: rgba(30, 122, 143, 0.08);
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.resource-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--teal);
+    margin-top: auto;
+}
+
+.resources-more-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.resources-more-link:hover {
+    border-bottom-color: var(--teal);
+    color: var(--teal);
+}
+
+.resources-section {
+    background-color: var(--light-blue);
+}
+
+/* ==========================================================================
+   Roles Section (What You Do / What HarbourView Does)
+   ========================================================================== */
+.roles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.roles-column {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.roles-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.roles-header--client {
+    background-color: var(--primary-blue);
+}
+
+.roles-header--client h3 {
+    color: var(--white);
+    margin: 0;
+}
+
+.roles-header--firm {
+    background-color: var(--teal);
+}
+
+.roles-header--firm h3 {
+    color: var(--white);
+    margin: 0;
+}
+
+.roles-icon {
+    font-size: 1.5rem;
+}
+
+.roles-steps {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.role-step {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+}
+
+.role-step-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.role-step-number--firm {
+    background-color: var(--teal);
+}
+
+.role-step-content strong {
+    display: block;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.role-step-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -748,6 +928,11 @@ ul {
     }
 
     .steps-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-cards-grid,
+    .resources-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
