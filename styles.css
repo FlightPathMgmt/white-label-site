@@ -536,6 +536,7 @@ ul {
 .gift-types-grid-bottom {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
 }
