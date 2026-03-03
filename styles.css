@@ -6,8 +6,8 @@
     /* Colors */
     --primary-blue: #1F2F44;
     /* Deep navy - Westwyn Ridge primary */
-    --teal: #8FA1A8;
-    /* Secondary slate */
+    --teal: #3D9DAA;
+    /* Bright teal accent */
     --gold: #d4af37;
     /* Premium gold accent */
     --accent-blue: #1F2F44;
@@ -26,9 +26,9 @@
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
 
     /* Styling elements */
     --border-radius-sm: 4px;
@@ -116,11 +116,11 @@ ul {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    padding: 0 2rem;
 }
 
 .section-padding {
-    padding: var(--spacing-xl) 0;
+    padding: 2.5rem 0;
 }
 
 .bg-light {
@@ -137,7 +137,7 @@ ul {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: var(--accent-blue);
+    color: var(--teal);
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -204,16 +204,31 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--gold);
-    color: var(--primary-blue);
+    background-color: var(--primary-blue);
+    color: var(--white);
     box-shadow: var(--shadow-md);
-    border-color: var(--gold);
+    border-color: var(--primary-blue);
 }
 
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--gold);
-    border-color: var(--gold);
+    background-color: #2d4260;
+    color: var(--white);
+    border-color: #2d4260;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-teal {
+    background-color: var(--teal);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal);
+}
+
+.btn-teal:hover {
+    background-color: #31828d;
+    color: var(--white);
+    border-color: #31828d;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -237,7 +252,7 @@ ul {
 
 .btn-white-outline:hover {
     background-color: var(--white);
-    color: var(--gold);
+    color: var(--teal);
 }
 
 /* ==========================================================================
@@ -286,9 +301,13 @@ ul {
     font-size: 0.95rem;
 }
 
-.main-nav ul a:hover,
-.main-nav ul a.active {
+.main-nav ul a:hover {
     color: var(--accent-blue);
+    position: relative;
+}
+
+.main-nav ul a.active {
+    color: var(--teal);
     position: relative;
 }
 
@@ -299,7 +318,7 @@ ul {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--accent-blue);
+    background-color: var(--teal);
 }
 
 .nav-actions {
@@ -432,7 +451,7 @@ ul {
 .step-number {
     width: 50px;
     height: 50px;
-    background-color: var(--primary-blue);
+    background-color: var(--teal);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -509,18 +528,22 @@ ul {
 }
 
 .gift-types-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-md);
 }
 
+.gift-types-grid-bottom {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
 .gift-card {
-    flex: 1 1 140px;
-    max-width: 220px;
     background-color: var(--white);
-    padding: var(--spacing-sm);
-    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
     text-align: center;
     border: 1px solid var(--border-color);
@@ -528,11 +551,34 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.75rem;
+    transition: var(--transition);
+    min-width: 155px;
+    max-width: 200px;
+}
+
+.gift-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--primary-blue);
+}
+
+.gift-card p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
 }
 
 .gift-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    width: 56px;
+    height: 56px;
+    background-color: var(--light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .benefits-image {
