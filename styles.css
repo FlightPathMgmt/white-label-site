@@ -1,23 +1,23 @@
 /* ==========================================================================
    CSS Variables & Theme Setup
-   Premium Wealth-Firm Look: Blues & White Spaces
+   Westwyn Ridge Wealth: Navy, Slate & Warm Grey
    ========================================================================== */
 :root {
     /* Colors */
-    --primary-blue: #12213e;
-    /* Deep navy */
-    --teal: #1e7a8f;
-    /* Lighter blue/teal/turquoise */
+    --primary-blue: #1F2F44;
+    /* Deep navy - Westwyn Ridge primary */
+    --teal: #8FA1A8;
+    /* Secondary slate */
     --gold: #d4af37;
     /* Premium gold accent */
-    --accent-blue: var(--teal);
-    /* Set teal as the primary accent, gold for buttons */
-    --light-blue: #f0f4f8;
-    /* Soft background */
+    --accent-blue: #1F2F44;
+    /* Use navy as primary accent */
+    --light-blue: #F4F5F4;
+    /* Very light warm grey background */
     --white: #ffffff;
-    --text-dark: #1e293b;
-    --text-muted: #475569;
-    --border-color: #cbd5e1;
+    --text-dark: #1F2F44;
+    --text-muted: #6b7b8a;
+    --border-color: #dde1e3;
 
     /* Typography */
     --font-heading: 'DM Sans', sans-serif;
