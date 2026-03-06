@@ -781,6 +781,90 @@ ul {
 }
 
 /* ==========================================================================
+   Journey Map Diagram
+   ========================================================================== */
+.journey-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 3rem auto 0;
+}
+
+.journey-step {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid;
+    position: relative;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.journey-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.journey-step.client-step {
+    border-color: var(--primary-blue);
+}
+
+.journey-step.firm-step {
+    border-color: var(--teal);
+}
+
+.step-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.client-step .step-badge {
+    background-color: var(--primary-blue);
+}
+
+.firm-step .step-badge {
+    background-color: var(--teal);
+}
+
+.journey-step h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.journey-step p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.journey-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.journey-arrow i {
+    color: #cbd5e1;
+    font-size: 2rem;
+}
+
+/* ==========================================================================
    Trusted Infrastructure / Partners
    ========================================================================== */
 .trusted-logo {
