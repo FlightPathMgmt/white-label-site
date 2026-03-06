@@ -783,6 +783,12 @@ ul {
 /* ==========================================================================
    Journey Map Diagram
    ========================================================================== */
+.journey-map-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
 .journey-map {
     display: flex;
     flex-direction: column;
@@ -854,6 +860,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: var(--primary-blue);
     font-size: 1.5rem;
     margin: 0.5rem 0;
@@ -862,6 +869,36 @@ ul {
 .journey-arrow i {
     color: #cbd5e1;
     font-size: 2rem;
+    font-style: normal;
+}
+
+/* Horizontal Map for Desktop */
+@media (min-width: 992px) {
+    .journey-map {
+        flex-direction: row;
+        align-items: stretch;
+        max-width: none;
+        width: max-content;
+        margin: 2rem auto 0 auto;
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .journey-step {
+        width: 250px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .journey-arrow {
+        flex-direction: row;
+        margin: 0 0.5rem;
+    }
+
+    .journey-arrow i {
+        transform: rotate(-90deg);
+    }
 }
 
 /* ==========================================================================
